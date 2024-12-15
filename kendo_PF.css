@@ -14,14 +14,53 @@ body, html {
 
 .Header {
   text-align: center;
-  padding: 0; 
-  height: 150px; /* set the header's height */
-  background: url('images/header2.jpg') no-repeat center center; /* Change background-color */
-  background-size: cover; 
+  padding: 0;
+  height: 150px; /* Default height for larger screens */
+  background: url('images/header2.jpg') no-repeat center center;
+  background-size: cover;
   color: #fff;
-  display: flex; /* To centre the content */
-  align-items: center; /* Add this for vertical alignment */
-  justify-content: center; /* Add this for horizontal alignment */
+  display: flex;
+  align-items: center; /* Vertically align content */
+  justify-content: center; /* Horizontally align content */
+  box-sizing: border-box; /* Ensure padding is included in height/width */
+}
+
+/* Responsive Styling for Mobile Screens */
+@media (max-width: 599px) { 
+  .header {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #MainContent {
+    display: grid;
+    grid-template-columns: 1fr; /* Single button per row */
+    grid-gap: 20px; /* Gap between buttons */
+    padding: 20px; /* Padding around the grid */
+    max-height: calc(100vh - 150px); /* Adjust for header/footer height */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .image-button {
+    height: 200px; /* Force buttons to remain 200px high */
+    min-height: 200px; /* Prevent shrinking below 200px */
+    width: 100%; /* Ensure full width */
+  }
+}
+
+
+
+  
+}
+
+.Header {
+  text-align: center;
+  padding: 10px 0;
+}
+  }
+}
+
 }
 
 /* https://stackoverflow.com/questions/71023962/how-to-make-a-pill-shape-button-with-html-and-css */
