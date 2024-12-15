@@ -1,0 +1,179 @@
+/* Assignment for CMPU4063 - Patrick Flynn */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* to fill the viewport */
+  overflow-y: auto
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.Header {
+  text-align: center;
+  padding: 0; 
+  height: 150px; /* set the header's height */
+  background: url('images/header2.jpg') no-repeat center center; /* Change background-color */
+  background-size: cover; 
+  color: #fff;
+  display: flex; /* To centre the content */
+  align-items: center; /* Add this for vertical alignment */
+  justify-content: center; /* Add this for horizontal alignment */
+}
+
+/* https://stackoverflow.com/questions/71023962/how-to-make-a-pill-shape-button-with-html-and-css */
+/* https://www.w3schools.com/howto/howto_css_pill_button.asp */
+.Menu {
+  text-align: left;
+  padding: 0; 
+  height: 50px; /* set the menu's height */
+  
+}
+/* Make the pill buttons */
+.pill-button {
+  background-color: red; 
+  color: black; 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  border: none; /* Remove default border */
+  border-radius: 50px; 
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pill-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Makes button slightly bigger on hover */
+}
+
+.pill-button:focus {
+  outline: none; /* Remove outline */
+}
+
+.Footer {
+  background-color: #222;
+}
+
+/* Main Content Styles with Grid */
+#MainContent {
+  display: grid; /* Enable grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Layout of buttons three per row */
+  grid-template-rows: repeat(2, 1fr); /* Two rows for six buttons */
+  gap: 10px; /* Spacing between buttons */
+  height: calc(100vh - 100px); /* Fill the viewport minus header/footer height */
+  padding: 10px; /* Optional padding */
+  overflow: hidden; /* Prevents scrolling */
+  background-color: #f4f4f4; /* Optional: Set a distinct background color */
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_button_on_image */
+.image-button {
+  position: relative;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  width: 100%; /* Takes full width of grid cell */
+  height: 100%; /* Takes full height of grid cell */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* https://stackoverflow.com/questions/23001031/how-do-i-make-an-image-fit-inside-a-button-in-css */
+.image-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes images fit in the buttons */
+}
+
+.image-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Text inside the button */
+.button-text {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+/* https://www.w3schools.com/howto/howto_css_images_side_by_side.asp */
+/* Mobile: 1 button per row */
+@media (max-width: 599px) {
+  #MainContent {
+    grid-template-columns: 1fr; /* Single button per row */
+    grid-template-rows: auto; /* Make each button 250px tall */
+    gap: 10px; /* Optional spacing between buttons */
+	height: auto
+	padding: 10px
+  }
+
+  body, html {
+    overflow-y: auto; /* to scroll vertically */
+  }
+}
+
+/* Tablet: Two buttons per row */
+@media (min-width: 600px) and (max-width: 899px) {
+  #MainContent {
+    grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
+  }
+}
+
+/* Desktop: Three buttons per row */
+@media (min-width: 900px) {
+  #MainContent {
+    grid-template-columns: repeat(3, 1fr); /* Three buttons per row */
+  }
+}
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color https://www.w3schools.com/howto/howto_css_contact_form.asp#gsc.tab=0 */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
