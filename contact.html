@@ -25,45 +25,41 @@
 	</div>
 
   <section>
+	<!-- https://www.youtube.com/watch?v=r4RQ38EoLds  and class notes Audrey Martin CMPU4063-->
     <div id="contact">
         <h2> Contact Us </h2>
     </div>
-    <div class="flexbox-center">
-      <form action="https://formsubmit.co/patrick.flynn@email.com" method="POST">
-	      	<input type="hidden" name="_captcha" value="false">
-		<input type="hidden" name="_subject" value="New submission!">
-		<input type="email" name="email" placeholder="Email Address" required>
-		<input type="hidden" name="_next" value="thankyou.html">
-		<input type="text" name="name" required>
-		<input type="email" name="email" required>
-		<button type="submit">Send</button>
-	  </form>
-	  
-	  
-	  <form method="get" id="myform" name="myform" onsubmit="sayHello(); checkAnimal()">
-        <fieldset>
-          <legend>Personal Details</legend>
-          Name:  <input type="text" id="fname" name="fname" required><br><br>
-          Contact Number:  <input type="text" id="cnumber" name="cnumber" required><br><br>
-        </fieldset>
-        <br>
-        <fieldset>
-          <legend> Interests</legend>
-            Style: <input type="text" id="style" name="style" required><br><br>
-            Level of Experience: <br>
-            Beginner <input type="radio" id="level" name="level" value="beginner">
-            Intermediate <input type="radio" id="level" name="level" value="intermediate">
-			Expert <input type="radio" id="level" name="level" value="expert"><br><br>
-            Enquiry:<br>
-            <textarea rows="6" cols="70">
-              Enter your enquiry here.
-            </textarea><br>
-          </fieldset>
+<div class="flexbox-center">
+  <form action="https://formsubmit.co/patrick.flynn@email.com" method="POST">
+    <!-- CAPTCHA and Subject Fields -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New submission!">
+    <input type="hidden" name="_next" value="thankyou.html">
+    
+    <fieldset>
+      <legend>Personal Details</legend>
+      Name:  <input type="text" id="fname" name="fname" required><br><br>
+      Email:  <input type="email" id="email" name="email" required><br><br>
+      Contact Number:  <input type="text" id="cnumber" name="cnumber" required><br><br>
+    </fieldset>
+    
+    <br>
+    <fieldset>
+      <legend>Interests</legend>
+      Style: <input type="text" id="style" name="style" required><br><br>
+      Level of Experience: <br>
+      Beginner <input type="radio" id="beginner" name="level" value="beginner">
+      Intermediate <input type="radio" id="intermediate" name="level" value="intermediate">
+      Expert <input type="radio" id="expert" name="level" value="expert"><br><br>
+      Enquiry:<br>
+      <textarea rows="6" cols="70" name="enquiry" required>Enter your enquiry here.</textarea><br>
+    </fieldset>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
 
 
-
-      </form>
-    </div>
 
   </section>
   <footer>
