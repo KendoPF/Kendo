@@ -5,6 +5,78 @@ body, html {
   height: 100%; /* to fill the viewport */
   overflow-y: auto
 }
+/* Google Fonts */
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
 
 .container {
   display: flex;
@@ -108,6 +180,48 @@ body, html {
   overflow: hidden; /* Prevents scrolling */
   background-color: #f4f4f4; /* Optional: Set a distinct background color */
 }
+/* Modal Styles - https://www.w3schools.com/howto/howto_css_modals.asp */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* bring to top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+}
+
+/* Modal Content Box */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px; /* Set max width for large screens */
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Video in Modal */
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_button_on_image */
 .image-button {
@@ -144,14 +258,14 @@ body, html {
 /* Text inside the button */
 .button-text {
   position: absolute;
-  bottom: 10px; /* Adjusts the placement relative to the button */
+  bottom: 10px; /* placement relative to the button */
   color: yellow;
   text-shadow: 2px 2px 5px red;
-  font-size: 24px; /* Adjust font size as needed */
+  font-size: 24px; 
   font-weight: bold;
   text-align: center;
-  white-space: nowrap; /* Prevents text wrapping */
-  overflow: hidden; /* Ensures long text doesn’t overflow the button boundaries */
+  white-space: nowrap; /* stop text wrapping */
+  overflow: hidden; 
   width: 90%; /* Keeps the text inside the button */
 }
 
@@ -159,10 +273,23 @@ body, html {
 /* https://www.w3schools.com/howto/howto_css_images_side_by_side.asp */
 /* Mobile: 1 button per row */
 @media (max-width: 599px) {
-  #MainContent {
-    grid-template-columns: 1fr; /* Single button per row */
-    grid-template-rows: auto; /* Make each button 250px tall */
-    gap: 10px; /* Optional spacing between buttons */
+  .Header {
+    display: block; /* keep the header visible */
+    max-width: auto; 
+    height: 100px; 
+    background: url('images/header2.jpg') no-repeat center center; 
+    background-size: cover; /* Scale the image to cover the full header */
+	 position: relative; 
+  z-index: 10; /* Place it above other elements */
+  }
+
+  .header-image {
+    display: none; /* If the image in the header isn't showing correctly, hide it */
+  }
+}#MainContent {
+    grid-template-columns: 1fr; /* one button per row */
+    grid-template-rows: auto; 
+    gap: 10px; /* spacing between buttons */
 	height: auto;
 	padding: 10px;
   }
@@ -208,7 +335,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color https://www.w3schools.com/howto/howto_css_contact_form.asp#gsc.tab=0 */
+/* When moving the mouse over the submit button, add a darker color https://www.w3schools.com/howto/howto_css_contact_form.asp#gsc.tab=0 */
 input[type=submit]:hover {
   background-color: #45a049;
 }
