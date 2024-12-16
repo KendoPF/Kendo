@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="kendo_PF.css">
 </head>
 <body>
+<!-- https://www.w3schools.com/howto/howto_css_modals.asp -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <video controls>
+      <source src="images/instructional-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
   <div class="container">
     <!-- Header with Image -->
     <div class="Header">
@@ -38,14 +49,16 @@
         <img src="images/stance.png" alt="Stances and Movement">
 		<span class="button-text">Stances & Movement</span>
       </button>
-      <button class="image-button">
-        <img src="images/videos.png" alt="Instructional Videos">
+      <button class="image-button" id="openModal">
+		<img src="images/videos.png" alt="Instructional Videos">
 		<span class="button-text">Instructional Videos</span>
-      </button>
+	  </button>
       
     </div>
+	<source src="images/instructional-video.mov" type="video/quicktime">
 
     <div class="Footer">Footer</div>
   </div>
+<script src="scripts.js"></script>
 </body>
 </html>
