@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>kendopf contact</title>
+<link href="kendopf.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="grid-container">
+  <header class="flexbox-center">
+      <h1>Kendo Enquiries</h1>
+  </header>
+ <div class="Menu">
+	   <a href="index.html">
+		<button class="pill-button">Home</button>
+	   </a>
+	   <a href="about.html">
+		<button class="pill-button">About</button>
+	   </a>
+	   <a href="contact.html">	   
+		<button class="pill-button">Enquiries</button>
+	   </a>		
+	</div>
+
+<section>
+	<!-- https://www.youtube.com/watch?v=r4RQ38EoLds  and class notes Audrey Martin CMPU4063-->
+    <div id="contact">
+        <h2> Contact Us </h2>
+    </div>
+<div class="flexbox-center">
+  <form action="https://formsubmit.co/patrick.flynn@email.com" method="POST">
+    <!-- CAPTCHA and Subject Fields -->
+    <input type="hidden" name="_captcha" value="false">  
+    <input type="hidden" name="_next" value="https://kendopf.github.io/thanks/">
+    <input type="hidden" name="_subject" value="New submission!">
+        
+    <fieldset>
+      <legend>Personal Details</legend>
+      Name:  <input type="text" id="fname" name="fname" required><br><br>
+      Email:  <input type="email" id="email" name="email" required><br><br>
+      Contact Number:  <input type="text" id="contact number" name="contact number" required><br><br>
+    </fieldset>
+    
+    <br>
+    <fieldset>
+      <legend>Interests</legend>
+      Style: <input type="text" id="style" name="style" required><br><br>
+      Level of Experience: <br>
+      Beginner <input type="radio" id="beginner" name="level" value="beginner">
+      Intermediate <input type="radio" id="intermediate" name="level" value="intermediate">
+      Expert <input type="radio" id="expert" name="level" value="expert"><br><br>
+      Enquiry:<br>
+      <textarea rows="6" cols="70" name="enquiry" required>Enter your enquiry here.</textarea><br>
+    </fieldset>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+
+
+  </section>
+  <footer>
+      <em> Copyright &copy; Pat Flynn, no affiliation to official Kendo Governing Bodies</em>
+  </footer>
+
+</div>
+</div>
+
+</body>
+</html>
+</body>
+</html>
